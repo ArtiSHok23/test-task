@@ -1,1 +1,124 @@
-/* Смотри сколько снизу свободного места! Оно идеально подойдёт, чтобы писать твои стили! */
+html {
+    box-sizing: border-box;
+}
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 24px;
+    background-color: #F6F6F6;
+    margin: 0;
+    padding: 0;
+}
+.wrapper{
+    max-width: 1200px;
+    min-height: 482px;
+    margin: 0 auto;
+    margin-top: 8vh;
+}
+.title h1{
+    text-align: center;
+    font-weight: 900;
+    font-size: 48px;
+    line-height: 72px;
+}
+.product-cards{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.product-card{
+    background-color: #FFF;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    border-radius: 12px;
+    margin: 10px;
+    width: 380px;
+    height: 482px;
+}
+.product-card__img{
+    border-radius: 12px 12px 0 0;
+    height: 214px;
+    margin-bottom: 24px;
+    background-size: cover;
+}
+.product-card__img_img-1, .product-card__img_img-2, .product-card__img_img-3{
+    background-image: url(https://cdn.pixabay.com/photo/2017/01/20/15/06/oranges-1995056__340.jpg);
+}
+.product-card__img_img-1::before{
+    content: 'НОВИНКА';
+    display: block;
+    position: relative;
+    font-size: 16px;
+    top: 16px;
+    left: 16px;
+    width: 110px;
+    height: 24px;
+    padding: 0 16px;
+    border-radius: 8px;
+    background-color: #FDCFF3;
+}
+.product-card__img_img-1::after{
+    content: 'ПОСЛЕДНИЙ';
+    display: block;
+    position: relative;
+    font-size: 16px;
+    top: -8px;
+    left: 144px;
+    width: 134px;
+    height: 24px;
+    padding: 0 16px;
+    border-radius: 8px;
+    background-color: #FFCF56;
+}
+.product-card__info{
+    padding: 0 24px;
+}
+.product-card__title{
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 36px;
+    margin: 16px 0;
+}
+.product-card__descr{
+    min-height: 96px;
+    font-weight: 400;
+    font-size: 16px;
+}
+.product-card__btn{
+    display: block;
+    width: 332px;
+    height: 48px;
+    border-radius: 8px;
+    font-weight: 900;
+    font-size: 18px;
+    border-radius: 10px;
+    margin: 16px 0 24px;
+}
+.product-card__btn_default{
+    background-color: #FFF;
+    border: 3px solid #42940F;
+    color: #42940F;
+}
+.product-card__btn_default:hover{
+    background-color: #42940F;
+    border: 3px solid #42940F;
+    color: #FFF;
+    cursor: pointer;
+}
+.product-card__btn_default:active{
+    background-color: #1F5200;
+    border: 3px solid #1F5200;
+    color: #FFF;
+    cursor: pointer;
+}
+.product-card__btn_disabled{
+    background-color: #4E4E4E;
+    border: 3px solid #4E4E4E;
+    color: #FFF;
+}
+.product-card__btn_disabled:hover{
+    cursor: pointer;
+}
